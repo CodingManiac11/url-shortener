@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# URL Shortener Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, interactive, and fully client-side URL Shortener built with React, TypeScript, and Material UI v7.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Unlimited URL Shortening:** Add, remove, and shorten as many URLs as you want in one go.
+- **Custom Shortcodes:** Optionally specify your own shortcode for each URL.
+- **Validity Period:** Set a custom validity (in minutes) for each short URL (defaults to 30 minutes).
+- **Unique Short Links:** All shortcodes are unique and validated.
+- **Redirection:** Visiting a short URL redirects to the original long URL (if not expired).
+- **Statistics Page:** View all created short URLs, their expiry, total clicks, and detailed click analytics (timestamp, source, location).
+- **Premium UI:** Beautiful, responsive design with gradients, custom colors, and Material UI icons.
+- **Robust Error Handling:** Friendly messages for invalid input, collisions, and expired links.
+- **Logging Middleware:** All actions and errors are logged to the evaluation server (no console.log used).
+- **No Backend Required:** All logic and storage are handled in the browser (localStorage).
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React** (with TypeScript)
+- **Material UI v7** (custom theme: purple & orange)
+- **LocalStorage** for persistence
+- **Custom Logging Middleware** (see `src/logging.ts`)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Setup & Running
 
-### `npm test`
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Start the development server:**
+   ```bash
+   npm start
+   ```
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+- `src/pages/UrlShortenerPage.tsx` — Main URL shortener form (unlimited rows, premium UI)
+- `src/pages/StatisticsPage.tsx` — Analytics and click stats
+- `src/pages/RedirectHandler.tsx` — Handles short URL redirection and click logging
+- `src/logging.ts` — Logging middleware (required by assignment)
+- `src/App.tsx` — Routing and theme
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> ![image](https://github.com/user-attachments/assets/37ab4fd6-6e42-4760-aaa3-e917121daee6)
+> ![image](https://github.com/user-attachments/assets/97457cea-8413-479a-a9ce-5eec4b660aa1)
+> ![image](https://github.com/user-attachments/assets/a9aa3207-d418-4264-a9b9-07c6cb1c1172)
+> ![image](https://github.com/user-attachments/assets/b726bdb2-206f-411a-99cf-c7e13591643c)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Assignment Compliance
 
-## Learn More
+- Uses **Material UI** for all styling
+- No backend or registration required
+- All logging via custom middleware (no console.log)
+- Fully client-side, runs on `http://localhost:3000`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
