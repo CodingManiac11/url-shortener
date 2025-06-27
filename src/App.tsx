@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import UrlShortenerPage from './pages/UrlShortenerPage';
+import StatisticsPage from './pages/StatisticsPage';
+import RedirectHandler from './pages/RedirectHandler';
 
-function App() {
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#8e24aa', // purple
+      contrastText: '#fff',
+    },
+    secondary: {
+      main: '#ff9800', // orange
+      contrastText: '#fff',
+    },
+    background: {
+      default: '#f3e5f5', // light purple background
+      paper: '#fff3e0',   // light orange paper
+    },
+  },
+});
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <AppBar position="static" color="primary">
+          <Toolbar>
+            <Typography variant="h6" sx={{ flexGrow: 1 }}>
+              URL Shortener
+            </Typography>
+            <Button color="inherit" component={Link} to="/">Shorten URL</Button>
+            <Button color="inherit" component={Link} to="/stats">Statistics</Button>
+          </Toolbar>
+        </AppBar>
+        <Container sx={{ mt: 4 }}>
+          <Routes>
+            <Route path="/" element={<UrlShortenerPage />} />
+            <Route path="/stats" element={<StatisticsPage />} />
+            <Route path=":shortcode" element={<RedirectHandler />} />
+          </Routes>
+        </Container>
+      </Router>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
