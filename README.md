@@ -1,4 +1,4 @@
-# URL Shortener Web App
+# URL Shortener Web App- ShortAF
 
 A modern, interactive, and fully client-side URL Shortener built with React, TypeScript, and Material UI v7.
 
@@ -44,10 +44,14 @@ A modern, interactive, and fully client-side URL Shortener built with React, Typ
 
 ## Screenshots
 
-> ![image](https://github.com/user-attachments/assets/37ab4fd6-6e42-4760-aaa3-e917121daee6)
-> ![image](https://github.com/user-attachments/assets/97457cea-8413-479a-a9ce-5eec4b660aa1)
-> ![image](https://github.com/user-attachments/assets/a9aa3207-d418-4264-a9b9-07c6cb1c1172)
-> ![image](https://github.com/user-attachments/assets/b726bdb2-206f-411a-99cf-c7e13591643c)
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2b69f454-75f4-41d8-9493-b52e00c48511" />
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2fff9b67-4a48-4048-9017-926d79dfde62" />
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/006b2a26-33d1-4dfa-8880-1eb0ec12a415" />
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3e2538fc-159f-4454-a3f7-a990e1d75a89" />
+
 
 
 
